@@ -13,5 +13,5 @@ gem 'haml-rails', '~> 0.5.3'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
-  gem 'factory_girl', '~> 4.4.0'
+  gem 'factory_girl_rails', '~> 4.4.0'
 end
