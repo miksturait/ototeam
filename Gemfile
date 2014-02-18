@@ -13,6 +13,7 @@ gem 'haml-rails', '~> 0.5.3'
 
 group :development do
   gem 'guard-rails', '~> 0.5.0'
+  gem 'guard-bundler', '~> 2.0.0'
 end
 
 group :development, :test do
