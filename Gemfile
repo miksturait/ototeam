@@ -14,6 +14,8 @@ gem 'haml-rails', '~> 0.5.3'
 group :development do
   gem 'guard-rails', '~> 0.5.0'
   gem 'guard-bundler', '~> 2.0.0'
+  gem 'guard-livereload', '~> 2.1.1', require: false
+  gem 'rack-livereload', '~> 0.3.15'
 end
 
 group :development, :test do
