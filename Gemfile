@@ -14,4 +14,7 @@ gem 'haml-rails', '~> 0.5.3'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'factory_girl_rails', '~> 4.4.0'
+  gem 'spring-commands-rspec', '~> 1.0.1'
+  gem 'guard-rspec', '~> 4.2.2'
+  gem 'rb-fsevent', '~> 0.9.4' if `uname` =~ /Darwin/
 end
