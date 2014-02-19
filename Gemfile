@@ -31,4 +31,6 @@ group :development, :test do
   gem 'guard-rspec', '~> 4.2.2'
   gem 'rspec-collection_matchers', '~> 0.0.3'
   gem 'rspec-its', '~> 1.0.0'
+  gem 'pry', '~> 0.9.12.6'
+  gem 'pry-debugger', '~> 0.2.2'
 end
