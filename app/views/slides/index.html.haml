@@ -1,0 +1,4 @@
+%h2 Warsztaty Rails
+%ul
+  - @available_slide_files.each do |file|
+    %li= link_to file, slide_path(file)

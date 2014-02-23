@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Warsztaty Rails
+    %meta{content: 'text/html; charset=US-ASCII', 'http-equiv' => 'Content-Type'}/
+    = stylesheet_link_tag 'remark', media: 'all'
+  %body
+    %textarea#source~ yield
+= javascript_include_tag 'http://gnab.github.io/remark/downloads/remark-0.6.0.min.js'
+= javascript_tag 'remark.create()'
