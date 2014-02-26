@@ -15,7 +15,7 @@ Ma elegancką składnię, którą czyta się naturalnie i jest łatwa w zapisie.
 
 ---
 
-# Podstawowe typy
+## Podstawowe typy
 
 ```ruby
 1000000, 1_000_000 # Liczby całkowite
@@ -35,7 +35,7 @@ nil # nic ;)
 
 ---
 
-# Klasy i obiekty - podstawy
+## Klasy i obiekty - podstawy
 
 ### Definiowanie klas
 _dyrektywa `class`_
@@ -46,7 +46,7 @@ _metoda `initialize`_
 
 ---
 
-# Klasy i obiekty - zmienne
+## Klasy i obiekty - zmienne
 
 * nazewnictwo
     * suffixy `?` oraz `!`
@@ -63,7 +63,7 @@ _metoda `initialize`_
 
 ---
 
-# Klasy i obiekty - metody
+## Klasy i obiekty - metody
 
 ### Metody instancji
 _dyrektywa `def`_
@@ -76,7 +76,7 @@ _`public`, `private`, `protected`_
 
 ---
 
-# Klasy i obiekty - cd.
+## Klasy i obiekty - cd.
 
 ### Makra
 _na przykładzie `attr_accessor`_
@@ -87,7 +87,7 @@ _dyrektywy `include` oraz `extend`_
 
 ---
 
-# Najważniejsze cechy i konstrukcje języka
+## Najważniejsze cechy i konstrukcje języka
 
 ### Wszystko jest obiektem
 _nawet prymitywy typu `nil`, `true` czy `false`. Co więcej klasy także są obiektami!_
@@ -96,7 +96,7 @@ _nawet wyrażenia logiczne czy iteratory_
 
 ---
 
-# Najważniejsze cechy i konstrukcje języka
+## Najważniejsze cechy i konstrukcje języka
 
 ### Wyrażenia logiczne
 _`if/elsif/else`, `case/when/then/else`, trójargumentowy `if`_
@@ -105,7 +105,7 @@ _na przykładzie `times`, `each`, `map`_
 
 ---
 
-# Najważniejsze cechy i konstrukcje języka
+## Najważniejsze cechy i konstrukcje języka
 
 ### Obsługa wyjątków
 _`throw/catch`, `raise/begin/rescue/ensure`_
@@ -114,7 +114,7 @@ _`->(){}`, `Proc.new(){}`, `lambda{}`
 
 ---
 
-# Zadanie domowe
+## Zadanie domowe
 
 * http://tryruby.org/
 * http://www.codecademy.com/tracks/ruby
