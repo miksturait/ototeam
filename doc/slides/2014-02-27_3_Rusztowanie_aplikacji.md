@@ -360,7 +360,8 @@ end
 
 **Na brązowy rubin:**
 
-Dodaj rusztowania (scaffoldy) dla Grup (group) i Znajomych (friend). Grupę ma opisywać nazwa (name) a znajomego nazwa (name), adres email (email) oraz numer telefonu (phone)
+Dodaj rusztowania (scaffoldy) dla wydarzeń _(event)_ Grup _(group)_ i Znajomych _(friend)_. Grupę ma opisywać nazwa _(name)_ a znajomego nazwa _(name)_, adres email _(email)_ oraz numer telefonu _(phone)_.
+Pola dla wydarzenia należy opracować na podstawie pliku znajdującego się w `/doc/wireframes/pages/new_event.png`
 
 **Na srebrny rubin:**
 
