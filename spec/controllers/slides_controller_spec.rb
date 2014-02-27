@@ -9,7 +9,7 @@ describe SlidesController do
 
   describe '#show' do
     context 'id is valid' do
-      before { get :show, id: '2014-02-24_Wprowadzenie_do_Git' }
+      before { get :show, id: '2014-02-24_1_Witamy' }
 
       it { expect(response).to be_success }
     end
