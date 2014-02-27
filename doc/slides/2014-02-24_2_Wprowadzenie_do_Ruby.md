@@ -15,7 +15,9 @@ Ma elegancką składnię, którą czyta się naturalnie i jest łatwa w zapisie.
 
 ---
 
-## Podstawowe typy
+class: monokai
+
+# Podstawowe typy
 
 ```ruby
 1000000, 1_000_000 # Liczby całkowite

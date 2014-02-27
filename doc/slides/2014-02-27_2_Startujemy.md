@@ -8,7 +8,7 @@ class: center
 
 ## Pobieranie projektu
 
-W Terminatorzre klonujemy projekt z repozytorim Git, a następnie wchodzimy
+W Terminatorze klonujemy projekt z repozytorim Git, a następnie wchodzimy
 do katalogu z projektem.
 
     git clone git@github.com:miksturait/ototeam.git
