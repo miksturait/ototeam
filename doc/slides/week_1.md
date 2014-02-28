@@ -11,7 +11,7 @@ _chaotyczne zestawienie ważnych aspektów poruszonych na ostatnich dwóch spotk
 * By uruchomić aplikację musimy utworzyć plik `database.yml` w katalogu `/config` - przykładowy plik do skopiowania znajduje się już w tym katalogu (`database.yml.example`)
 * Bazę migrujemy (zmiany określone w migracjach _"aplikujemy"_ na bazę) poprzez `rake db:migrate`
     * Jeśli migracja coś nam się rzuca że "relation already exists" to najprościej jest najpierw usunąć bazę poprzez `rake db:drop`
-* Serwer uruchamiamy z konsoli, bądź poprzez komendę `rails s` bądź komendę `guard`
+* Serwer uruchamiamy z konsoli: bądź poprzez komendę `rails s` bądź komendę `guard`
 * Z `guard`a wychodzimy wpisując `exit`
 * Uważajmy na literówki - były one przyczyną większości problemów na ostanich warsztatach
 * Bardzo pomocne jest przeglądanie poczynionych zmian (podsumowanie poprzez wywołanie `alt-2`)
