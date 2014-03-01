@@ -28,6 +28,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '3.0.0.beta1'
   gem 'factory_girl_rails', '~> 4.4.0'
+  gem 'ffaker', '~> 1.23.0'
   gem 'spring-commands-rspec', '~> 1.0.1'
   gem 'guard-rspec', '~> 4.2.2'
   gem 'rspec-collection_matchers', '~> 0.0.3'
