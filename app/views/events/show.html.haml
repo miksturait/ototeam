@@ -1,0 +1,32 @@
+.page-header
+  = link_to events_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_event_path(@event), :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show event
+
+%dl.dl-horizontal
+  %dt State:
+  %dd= @event.state
+  %dt Name:
+  %dd= @event.name
+  %dt Description:
+  %dd= @event.description
+  %dt Start at:
+  %dd= @event.start_at
+  %dt Invite from:
+  %dd= @event.invite_from
+  %dt Invite to:
+  %dd= @event.invite_to
+  %dt Attendees min count:
+  %dd= @event.attendees_min_count
+  %dt Attendees max count:
+  %dd= @event.attendees_max_count
+  %dt Minutes for answer:
+  %dd= @event.minutes_for_answer
+  %dt Public attendees list:
+  %dd= @event.public_attendees_list
+  %dt Creator:
+  %dd= @event.creator_id

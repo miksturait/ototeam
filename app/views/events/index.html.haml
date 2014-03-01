@@ -1,0 +1,42 @@
+.page-header
+  = link_to new_event_path, :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Event
+  %h1 Listing events
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th State
+        %th Name
+        %th Description
+        %th Start at
+        %th Invite from
+        %th Invite to
+        %th Attendees min count
+        %th Attendees max count
+        %th Minutes for answer
+        %th Public attendees list
+        %th Creator
+        %th
+        %th
+        %th
+
+    %tbody
+      - @events.each do |event|
+        %tr
+          %td= event.state
+          %td= event.name
+          %td= event.description
+          %td= event.start_at
+          %td= event.invite_from
+          %td= event.invite_to
+          %td= event.attendees_min_count
+          %td= event.attendees_max_count
+          %td= event.minutes_for_answer
+          %td= event.public_attendees_list
+          %td= event.creator_id
+          %td= link_to 'Show', event
+          %td= link_to 'Edit', edit_event_path(event)
+          %td= link_to 'Destroy', event, :data => { confirm: 'Are you sure?' }, :method => :delete
