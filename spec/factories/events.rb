@@ -2,16 +2,15 @@
 
 FactoryGirl.define do
   factory :event do
-    state "MyString"
-    name "MyString"
-    description "MyText"
-    start_at "2014-03-01 20:09:36"
-    invite_from "2014-03-01 20:09:36"
-    invite_to "2014-03-01 20:09:36"
-    attendees_min_count 1
-    attendees_max_count 1
-    minutes_for_answer 1
+    state 'initial'
+    name { Faker::Movie.title }
+    description { Faker::Lorem.sentence }
+    start_at { (rand(10) + 1).days.from_now }
+    invite_from { start_at - 8.hours }
+    invite_to { start_at - 2.hours }
+    attendees_min_count { rand(5) }
+    attendees_max_count { attendees_min_count + rand(5) }
+    minutes_for_answer 60
     public_attendees_list false
-    creator_id 1
   end
 end
