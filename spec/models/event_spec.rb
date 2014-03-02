@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Event do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { create(:event) }
+
+  describe '#attendees_count' do
+    its(:attendees_count) { should eql 0 }
+  end
 end
