@@ -1,0 +1,12 @@
+.page-header
+  = icon_link_to 'list-alt', 'Back', friends_path, class: 'btn btn-default'
+  = icon_link_to :pencil, 'Edit', edit_friend_path(@friend), class: 'btn btn-primary'
+  %h1 Show friend
+
+%dl.dl-horizontal
+  %dt Fullname:
+  %dd= @friend.fullname
+  %dt Email:
+  %dd= @friend.email
+  %dt Phone:
+  %dd= @friend.phone

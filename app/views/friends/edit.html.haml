@@ -1,0 +1,6 @@
+.page-header
+  = icon_link_to 'list-alt', 'Back', friends_path, class: 'btn btn-default'
+  = icon_link_to 'info-sign', 'Show', @friend, class: 'btn btn-primary'
+  %h1 Editing friend
+
+= render 'form'

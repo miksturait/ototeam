@@ -1,0 +1,18 @@
+= form_for @friend, :html => { :class => "form-horizontal" } do |f|
+  = render 'shared/object_errors', object: @friend
+
+  .form-group
+    = f.label :fullname, :class => 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :fullname, :class => 'form-control'
+  .form-group
+    = f.label :email, :class => 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :email, :class => 'form-control'
+  .form-group
+    = f.label :phone, :class => 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :phone, :class => 'form-control'
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit :class => 'btn btn-primary'

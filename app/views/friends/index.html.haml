@@ -1,0 +1,16 @@
+.page-header
+  = icon_link_to :plus, 'New Friend', new_friend_path, class: 'btn btn-primary'
+  %h1 Listing friends
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Fullname
+        %th Email
+        %th Phone
+        %th Groups
+        %th Attendance
+        %th Actions
+    %tbody
+      = render @friends
