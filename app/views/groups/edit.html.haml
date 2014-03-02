@@ -1,0 +1,6 @@
+.page-header
+  = icon_link_to 'list-alt', 'Back', groups_path, class: 'btn btn-default'
+  = icon_link_to 'info-sign', 'Show', @group, class: 'btn btn-primary'
+  %h1 Editing group
+
+= render 'form'

@@ -1,0 +1,14 @@
+.page-header
+  = icon_link_to :plus, 'New Group', new_group_path, class: 'btn btn-primary'
+  %h1 Listing groups
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Name
+        %th Friends count
+        %th Actions
+    %tbody
+      = render @groups
+

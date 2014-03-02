@@ -1,0 +1,8 @@
+.page-header
+  = icon_link_to 'list-alt', 'Back', groups_path, class: 'btn btn-default'
+  = icon_link_to :pencil, 'Edit', edit_group_path(@group), class: 'btn btn-primary'
+  %h1 Show group
+
+%dl.dl-horizontal
+  %dt Name:
+  %dd= @group.name
