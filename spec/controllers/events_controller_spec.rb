@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe EventsController do
   let(:event) { create(:event) }
-  let(:valid_attributes) { { 'state' => 'New state'} }
+  let(:valid_attributes) { attributes_for(:event) }
 
   describe '#index' do
     before { get :index }
@@ -56,6 +56,7 @@ describe EventsController do
   end
 
   describe '#update' do
+    let(:valid_attributes) { { 'name' => 'Some name' } }
     let(:call_request) { put :update, id: event.to_param, event: valid_attributes }
 
     describe 'with valid params' do

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe FriendsController do
   let(:friend) { create(:friend) }
-  let(:valid_attributes) { { 'fullname' => 'John Bravo' } }
+  let(:valid_attributes) { attributes_for(:friend) }
 
   describe '#index' do
     before { get :index }
@@ -56,6 +56,7 @@ describe FriendsController do
   end
 
   describe '#update' do
+    let(:valid_attributes) { { 'fullname' => 'Some name' } }
     let(:call_request) { put :update, id: friend.to_param, friend: valid_attributes }
 
     describe 'with valid params' do

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe GroupsController do
   let(:group) { create(:group) }
-  let(:valid_attributes) { { 'name' => 'Players'} }
+  let(:valid_attributes) { attributes_for(:group) }
 
   describe '#index' do
     before { get :index }
@@ -56,6 +56,7 @@ describe GroupsController do
   end
 
   describe '#update' do
+    let(:valid_attributes) { { 'name' => 'Some name' } }
     let(:call_request) { put :update, id: group.to_param, group: valid_attributes }
 
     describe 'with valid params' do
