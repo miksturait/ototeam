@@ -1,10 +1,6 @@
 .page-header
-  = link_to events_path, class: 'btn btn-default' do
-    %span.glyphicon.glyphicon-list-alt
-    Back
-  = link_to @event, class: 'btn btn-primary' do
-    %span.glyphicon.glyphicon-info-sign
-    Show
+  = icon_link_to 'list-alt', 'Back', events_path, class: 'btn btn-default'
+  = icon_link_to 'info-sign', 'Show', @event, class: 'btn btn-primary'
   %h1 Editing event
 
 = render 'form'

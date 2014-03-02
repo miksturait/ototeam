@@ -1,7 +1,5 @@
 .page-header
-  = link_to new_event_path, class: 'btn btn-primary' do
-    %span.glyphicon.glyphicon-plus
-    New Event
+  = icon_link_to :plus, 'New Event', new_event_path, class: 'btn btn-primary'
   %h1 Listing events
 
 .table-responsive

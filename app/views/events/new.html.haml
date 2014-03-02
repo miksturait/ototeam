@@ -1,7 +1,5 @@
 .page-header
-  = link_to events_path, class: 'btn btn-default' do
-    %span.glyphicon.glyphicon-list-alt
-    Back
+  = icon_link_to 'list-alt', 'Back', events_path, class: 'btn btn-default'
   %h1 New event
 
 = render 'form'
