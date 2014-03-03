@@ -1,42 +1,15 @@
-= form_for @event, html: { class: 'form-horizontal' } do |f|
+= simple_form_for @event, html: { class: 'form-horizontal' } do |f|
   = render 'shared/object_errors', object: @event
 
-  .form-group
-    = f.label :name, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_field :name, :class => 'form-control'
-  .form-group
-    = f.label :description, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_area :description, :class => 'form-control'
-  .form-group
-    = f.label :start_at, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.datetime_select :start_at, :class => 'form-control'
-  .form-group
-    = f.label :invite_from, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.datetime_select :invite_from, :class => 'form-control'
-  .form-group
-    = f.label :invite_to, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.datetime_select :invite_to, :class => 'form-control'
-  .form-group
-    = f.label :attendees_min_count, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.number_field :attendees_min_count, :class => 'form-control'
-  .form-group
-    = f.label :attendees_max_count, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.number_field :attendees_max_count, :class => 'form-control'
-  .form-group
-    = f.label :minutes_for_answer, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.number_field :minutes_for_answer, :class => 'form-control'
-  .form-group
-    = f.label :public_attendees_list, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.check_box :public_attendees_list, :class => 'form-control'
+  = f.input :name
+  = f.input :description
+  = f.input :start_at
+  = f.input :invite_from
+  = f.input :invite_to
+  = f.input :attendees_min_count
+  = f.input :attendees_max_count
+  = f.input :minutes_for_answer
+  = f.input :public_attendees_list
   .form-group
     .col-sm-offset-2.col-sm-10
-      = f.submit :class => 'btn btn-primary'
+      = f.button :submit, class: 'btn-primary'

@@ -1,10 +1,7 @@
-= form_for @group, html: { class: 'form-horizontal' } do |f|
+= simple_form_for @group, html: { class: 'form-horizontal' } do |f|
   = render 'shared/object_errors', object: @group
 
-  .form-group
-    = f.label :name, :class => 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_field :name, :class => 'form-control'
+  = f.input :name
   .form-group
     .col-sm-offset-2.col-sm-10
-      = f.submit :class => 'btn btn-primary'
+      = f.button :submit, class: 'btn-primary'
