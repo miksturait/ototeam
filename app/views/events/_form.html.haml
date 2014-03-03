@@ -1,0 +1,14 @@
+= simple_form_for @event, :html => { :class => "form-horizontal" } do |f|
+
+
+  = f.input :name
+  = f.input :start_time
+  = f.input :description
+  = f.input :invite_start
+  = f.input :inivite_stop
+  = f.input :user_min
+  = f.input :user_max
+  = f.input :time
+  = f.input :join
+  = f.input :public
+  = f.button :submit

@@ -1,0 +1,16 @@
+.page-header
+  = link_to friends_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_friend_path(@friend), :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show friend
+
+%dl.dl-horizontal
+  %dt Name:
+  %dd= @friend.name
+  %dt Email:
+  %dd= @friend.email
+  %dt Numer tel:
+  %dd= @friend.numer_tel

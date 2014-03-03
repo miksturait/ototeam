@@ -1,4 +1,13 @@
 Ototeam::Application.routes.draw do
+  resources :events
+
+  resources :friends
+
+  resources :groups
+
+  resources :posts
+
+  root 'posts#index'
   resources :slides, only: %i(index show)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

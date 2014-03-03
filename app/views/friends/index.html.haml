@@ -1,0 +1,26 @@
+.page-header
+  = link_to new_friend_path, :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Friend
+  %h1 Listing friends
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Name
+        %th Email
+        %th Numer tel
+        %th
+        %th
+        %th
+
+    %tbody
+      - @friends.each do |friend|
+        %tr
+          %td= friend.name
+          %td= friend.email
+          %td= friend.numer_tel
+          %td= link_to 'Show', friend
+          %td= link_to 'Edit', edit_friend_path(friend)
+          %td= link_to 'Destroy', friend, :data => { confirm: 'Are you sure?' }, :method => :delete
