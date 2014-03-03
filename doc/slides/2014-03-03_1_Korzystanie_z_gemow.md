@@ -121,11 +121,11 @@ wolniej.
 Dodaj stronicowanie wyników tak, by na ekranie było nie więcej niż 10 spotkań.
 
 **Na srebrny rubin:**
-Dodaj sortowanie wg kolumn tabeli
-
-**Na złoty rubin:**
 Dodaj wyszukiwanie spotkań wg nazwy, opisu i daty rozpoczęcia
 
+**Na złoty rubin:**
+* Zainstaluj i skonfiguruj gem Devise - aplikacja powinna umożliwiać rejestrację
+* Strony events, friends i groups powinny wymagać zalogowania się do aplikacji
 
 Do implementacji powyższych funkcjonalności możesz użyć gemów `kaminari` i `ransack`
 lub wykorzystać inny znaleziony gem ([The Ruby Toolbox](https://www.ruby-toolbox.com/)).
