@@ -8,7 +8,7 @@ Wykonuj "zadania domowe" i zdobywaj kolejne rubinki. Jeżeli zakodowałeś dane 
 przed zajęciami i przez 10 minut po zajęciach prowadzący czekają na to, byś pochwalił się swoim kodem.
 
 Możesz też przejrzeć [szczegółową rozpiskę](https://docs.google.com/spreadsheets/d/1NsZzwRjrbuBVxPebSq0zSjgo_ALi3PdiT7P0W0sFK0k/edit?usp=sharing) ukończonych zadań per koder.
-Ostatnia aktualizacja: 2014-03-03 18:20
+Ostatnia aktualizacja: 2014-03-03 18:55
 
 ## Lista wg nazw użytkowników z GitHub
 
@@ -31,6 +31,9 @@ Ostatnia aktualizacja: 2014-03-03 18:20
 ![gold](rimg/gold.png)
 
 ### krypton9208
+![silver](rimg/silver.png)
+
+### wilman2
 ![silver](rimg/silver.png)
 
 ### swierczek
