@@ -16,6 +16,7 @@ gem 'haml-rails', '~> 0.5.3'
 gem 'simple_form', '3.0.1'
 gem "kaminari", "~> 0.15.1"
 gem 'ransack'
+gem "devise", "~> 3.2.3"
 
 group :development do
   gem 'guard-rails', '~> 0.5.0'
