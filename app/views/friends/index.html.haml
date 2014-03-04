@@ -16,6 +16,8 @@
         %th
 
     %tbody
+
+    = paginate @friends
       - @friends.each do |friend|
         %tr
           %td= friend.name

@@ -6,11 +6,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-  def up
-
-     Group.new(name: "grupa ##{i}")
+I18n.enforce_available_locales = false
+puts "work"
+  Group.destroy_all
+  Friend.destroy_all
+  25.times do |i|
+     Group.create(name: "grupa #{i}")
   end
 
-  def down
-   Group.destroy_all
+  25.times do |t|
+    Friend.create(name: "kolega nr #{t}", email: "kolega_nr_#{t}@ruby.pl", numer_tel: "{t}{t}{t}{t}{t}{t}")
   end
+
+

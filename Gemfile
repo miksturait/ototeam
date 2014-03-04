@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.1.0'
 gem 'rails', '4.0.2'
-
 gem 'thin', '~> 1.6.1'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'

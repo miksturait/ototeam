@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
 
   # GET /groups
   def index
-    @groups = Group.all
+    @groups = Group.order("name").page(params[:page]).per(10)
   end
 
   # GET /groups/1
