@@ -23,6 +23,12 @@
         %th
 
     %tbody
+
+      / = search_form_for @search do |f|
+      /  =f.label :name_cont, 'Name contains'
+      /  =f.text_field :name_cont
+      /  =f.submit 'Search'
+
       = paginate @events
       - @events.each do |event|
         %tr

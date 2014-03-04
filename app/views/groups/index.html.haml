@@ -15,6 +15,7 @@
 
     %tbody
       = paginate @groups
+
       - @groups.each do |group|
         %tr
           %td= group.name

@@ -4,7 +4,9 @@ class EventsController < ApplicationController
   # GET /events
   def index
     @events = Event.order("name").page(params[:page]).per(10)
-
+   # @search = Event.search(params[:q]).order("name").page(params[:page]).per(10)
+     #@search = Event.search(params[:name])
+    #@events = @search.result.order("name").page(params[:page]).per(10)
   end
   # GET /events/1
   def show

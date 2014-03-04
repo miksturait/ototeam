@@ -6,8 +6,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-I18n.enforce_available_locales = false
-puts "work"
+#I18n.enforce_available_locales = false
   Group.destroy_all
   Friend.destroy_all
   25.times do |i|
@@ -15,7 +14,12 @@ puts "work"
   end
 
   25.times do |t|
-    Friend.create(name: "kolega nr #{t}", email: "kolega_nr_#{t}@ruby.pl", numer_tel: "{t}{t}{t}{t}{t}{t}")
+    k = rand(999).to_s
+    Friend.create(name: "kolega nr " + k, numer_tel: rand(9999999999).to_s.center(10, rand(9).to_s).to_i , email: "kolega_nr_#"+k +"@ruby.pl")
   end
+
+
+
+puts "seeded"
 
 
