@@ -14,3 +14,7 @@
         %th Actions
     %tbody
       = render @friends
+
+.text-center
+  .text-muted= page_entries_info @friends
+  = paginate @friends

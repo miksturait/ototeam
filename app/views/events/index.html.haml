@@ -16,3 +16,7 @@
 
     %tbody
       = render @events
+
+.text-center
+  .text-muted= page_entries_info @events
+  = paginate @events

@@ -2,7 +2,7 @@ class FriendsController < ApplicationController
   before_action :set_friend, only: [:show, :edit, :update, :destroy]
 
   def index
-    @friends = Friend.all
+    @friends = Friend.all.page(params[:page])
   end
 
   def show
