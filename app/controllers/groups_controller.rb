@@ -2,7 +2,7 @@ class GroupsController < AuthenticatedUser
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   def index
-    @q = Group.search(params[:q])
+    @q = groups.search(params[:q])
     @groups = @q.result.page(params[:page])
   end
 
@@ -10,14 +10,14 @@ class GroupsController < AuthenticatedUser
   end
 
   def new
-    @group = Group.new
+    @group = groups.build
   end
 
   def edit
   end
 
   def create
-    @group = Group.new(group_params)
+    @group = groups.build(group_params)
 
     if @group.save
       redirect_to @group, notice: 'Group was successfully created.'
@@ -41,10 +41,14 @@ class GroupsController < AuthenticatedUser
 
   private
     def set_group
-      @group = Group.find(params[:id])
+      @group = groups.find(params[:id])
     end
 
     def group_params
-      params.require(:group).permit(:creator_id, :name)
+      params.require(:group).permit(:name)
+    end
+
+    def groups
+      current_user.groups
     end
 end

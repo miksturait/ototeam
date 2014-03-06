@@ -2,7 +2,7 @@ class EventsController < AuthenticatedUser
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @q = Event.search(params[:q])
+    @q = events.search(params[:q])
     @events = @q.result.page(params[:page])
   end
 
@@ -10,14 +10,14 @@ class EventsController < AuthenticatedUser
   end
 
   def new
-    @event = Event.new
+    @event = events.build
   end
 
   def edit
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = events.build(event_params)
 
     if @event.save
       redirect_to @event, notice: 'Event was successfully created.'
@@ -41,10 +41,14 @@ class EventsController < AuthenticatedUser
 
   private
     def set_event
-      @event = Event.find(params[:id])
+      @event = events.find(params[:id])
     end
 
     def event_params
-      params.require(:event).permit(:state, :name, :description, :start_at, :invite_from, :invite_to, :attendees_min_count, :attendees_max_count, :minutes_for_answer, :public_attendees_list, :creator_id)
+      params.require(:event).permit(:state, :name, :description, :start_at, :invite_from, :invite_to, :attendees_min_count, :attendees_max_count, :minutes_for_answer, :public_attendees_list)
+    end
+
+    def events
+      current_user.events
     end
 end

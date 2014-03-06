@@ -2,7 +2,7 @@ class FriendsController < AuthenticatedUser
   before_action :set_friend, only: [:show, :edit, :update, :destroy]
 
   def index
-    @q = Friend.search(params[:q])
+    @q = friends.search(params[:q])
     @friends = @q.result.page(params[:page])
   end
 
@@ -10,14 +10,14 @@ class FriendsController < AuthenticatedUser
   end
 
   def new
-    @friend = Friend.new
+    @friend = friends.build
   end
 
   def edit
   end
 
   def create
-    @friend = Friend.new(friend_params)
+    @friend = friends.build(friend_params)
 
     if @friend.save
       redirect_to @friend, notice: 'Friend was successfully created.'
@@ -41,10 +41,14 @@ class FriendsController < AuthenticatedUser
 
   private
     def set_friend
-      @friend = Friend.find(params[:id])
+      @friend = friends.find(params[:id])
     end
 
     def friend_params
       params.require(:friend).permit(:fullname, :email, :phone)
+    end
+
+    def friends
+      current_user.friends
     end
 end
