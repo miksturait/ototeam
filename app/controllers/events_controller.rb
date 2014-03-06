@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class EventsController < AuthenticatedUser
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index

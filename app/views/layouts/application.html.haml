@@ -25,19 +25,20 @@
             %span.icon-bar
             %span.icon-bar
           = link_to 'otoTeam', root_path, class: 'navbar-brand'
-        .collapse.navbar-collapse
-          %ul.nav.navbar-nav
-            %li.active
-              = link_to 'Events', events_path
-            %li
-              = link_to 'Friends', friends_path
-            %li
-              = link_to 'Groups', groups_path
-          %ul.nav.navbar-nav.navbar-right
-            %li
-              = link_to 'Profile', '#'
-            %li
-              = link_to 'Logout', '#'
+        - if user_signed_in?
+          .collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li.active
+                = link_to 'Events', events_path
+              %li
+                = link_to 'Friends', friends_path
+              %li
+                = link_to 'Groups', groups_path
+            %ul.nav.navbar-nav.navbar-right
+              %li
+                = link_to 'Profile', edit_user_registration_path
+              %li
+                = link_to 'Logout', destroy_user_session_path, method: :delete
     .container
       = render 'shared/flash_messages'
       = yield

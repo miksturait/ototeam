@@ -1,4 +1,4 @@
-class FriendsController < ApplicationController
+class FriendsController < AuthenticatedUser
   before_action :set_friend, only: [:show, :edit, :update, :destroy]
 
   def index

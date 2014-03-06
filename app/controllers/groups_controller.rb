@@ -1,4 +1,4 @@
-class GroupsController < ApplicationController
+class GroupsController < AuthenticatedUser
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   def index
