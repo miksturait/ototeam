@@ -12,3 +12,11 @@
  *= require bootstrap-datetimepicker
  *= require_tree .
  */
+
+.devise-link a:first-child {
+  border-left: none;
+}
+.devise-link a {
+  padding: 0 10px;
+  border-left: 1px solid #cccccc;
+}

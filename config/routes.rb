@@ -1,6 +1,8 @@
 Ototeam::Application.routes.draw do
   devise_for :users
-  root 'events#index'
+  devise_scope :user do
+    root 'events#index'
+  end
   resources :events
   resources :friends
   resources :groups
