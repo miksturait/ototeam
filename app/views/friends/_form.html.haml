@@ -4,6 +4,7 @@
   = f.input :fullname
   = f.input :email
   = f.input :phone
+  = f.association :groups, as: :check_boxes
   .form-group
     .col-sm-offset-2.col-sm-10
       = f.button :submit, class: 'btn-primary'

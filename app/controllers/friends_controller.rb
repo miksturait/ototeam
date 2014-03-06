@@ -45,7 +45,7 @@ class FriendsController < AuthenticatedUser
     end
 
     def friend_params
-      params.require(:friend).permit(:fullname, :email, :phone)
+      params.require(:friend).permit(:fullname, :email, :phone, { group_ids: [] })
     end
 
     def friends

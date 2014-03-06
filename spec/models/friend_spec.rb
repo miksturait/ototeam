@@ -2,7 +2,10 @@ require 'spec_helper'
 
 describe Friend do
   describe '#group_names' do
-    its(:group_names) { should eql 'Piłka, Bar' }
+    let(:group) { create(:group, name: 'testowa') }
+    before { subject.groups << group }
+
+    its(:group_names) { should eql 'testowa' }
   end
 
   describe '#attendance_percentage' do

@@ -8,7 +8,7 @@ class Friend < ActiveRecord::Base
   validate :has_email_or_phone
 
   def group_names
-    'Piłka, Bar'
+    groups.map(&:name).to_sentence
   end
 
   def attendance_percentage
