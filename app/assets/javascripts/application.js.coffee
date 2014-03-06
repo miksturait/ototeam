@@ -14,4 +14,6 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require bootstrap
+#= require bootstrap-datetimepicker/core
+#= require components/pickers
 #= require_tree .

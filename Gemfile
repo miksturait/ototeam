@@ -18,6 +18,7 @@ gem 'simple_form', '~> 3.0.1'
 gem 'kaminari', '~> 0.15.1'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'datetimepicker-rails', require: 'datetimepicker-rails', github: 'newstler/datetimepicker-rails'
 
 group :development do
   gem 'guard-rails', '~> 0.5.0'

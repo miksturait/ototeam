@@ -9,6 +9,12 @@ GIT
       i18n
       polyamorous (~> 0.6.0)
 
+GIT
+  remote: git://github.com/newstler/datetimepicker-rails.git
+  revision: de28e8fa2db990d9b40477ba4f8f83e317539543
+  specs:
+    datetimepicker-rails (0.0.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -246,6 +252,7 @@ DEPENDENCIES
   bootstrap-generators (~> 3.1.0)
   bootstrap-sass (~> 3.1.0)
   coffee-rails (~> 4.0.1)
+  datetimepicker-rails!
   factory_girl_rails (~> 4.4.0)
   ffaker (~> 1.23.0)
   guard-bundler (~> 2.0.0)
