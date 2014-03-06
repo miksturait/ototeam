@@ -1,9 +1,10 @@
 require 'spec_helper'
 
 describe GroupsController do
-  let(:group) { create(:group) }
+  let(:user) { create(:user) }
+  let(:group) { create(:group, creator: user) }
   let(:valid_attributes) { attributes_for(:group) }
-  before { sign_in create(:user) }
+  before { sign_in user }
 
   describe '#index' do
     before { get :index }
