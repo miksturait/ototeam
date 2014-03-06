@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/activerecord-hackery/ransack.git
+  revision: 17ff9c95ade1de1cf9c1a59513e03635aac095d7
+  specs:
+    ransack (1.1.0)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 0.6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -124,6 +135,8 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.4)
     nio4r (1.0.0)
+    polyamorous (0.6.4)
+      activerecord (>= 3.0)
     polyglot (0.3.4)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -248,6 +261,7 @@ DEPENDENCIES
   quiet_assets (~> 1.0.2)
   rack-livereload (~> 0.3.15)
   rails (= 4.0.2)
+  ransack!
   rb-fsevent (~> 0.9.4)
   rspec-collection_matchers (~> 0.0.3)
   rspec-its (~> 1.0.0)
