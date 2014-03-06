@@ -2,7 +2,8 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   def index
-    @groups = Group.all.page(params[:page])
+    @q = Group.search(params[:q])
+    @groups = @q.result.page(params[:page])
   end
 
   def show

@@ -2,6 +2,11 @@
   = icon_link_to :plus, 'New Group', new_group_path, class: 'btn btn-primary'
   %h1 Listing groups
 
+= search_form_for @q, wrapper: :search_form do |f|
+  = f.input :name_cont, as: :string, placeholder: 'Name contains', wrapper_html: { class: 'col-sm-3' }
+  .form-group
+    = f.button :submit
+
 .table-responsive
   %table.table.table-striped.table-bordered.table-hover
     %thead
