@@ -1,5 +1,6 @@
 class: center, middle, inverse
 
+## Refaktoryzacja kodu
 # Decent Exposure
 
 ---
