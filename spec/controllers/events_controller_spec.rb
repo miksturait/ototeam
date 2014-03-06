@@ -3,6 +3,7 @@ require 'spec_helper'
 describe EventsController do
   let(:event) { create(:event) }
   let(:valid_attributes) { attributes_for(:event) }
+  before { sign_in create(:user) }
 
   describe '#index' do
     before { get :index }

@@ -3,6 +3,7 @@ require 'spec_helper'
 describe FriendsController do
   let(:friend) { create(:friend) }
   let(:valid_attributes) { attributes_for(:friend) }
+  before { sign_in create(:user) }
 
   describe '#index' do
     before { get :index }
