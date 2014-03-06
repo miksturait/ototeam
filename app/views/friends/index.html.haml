@@ -2,6 +2,13 @@
   = icon_link_to :plus, 'New Friend', new_friend_path, class: 'btn btn-primary'
   %h1 Listing friends
 
+= search_form_for @q, wrapper: :search_form do |f|
+  = f.input :fullname_or_email_or_phone_cont, as: :string,
+                                              placeholder: 'Name, email or phone contains',
+                                              wrapper_html: { class: 'col-sm-4' }
+  .form-group
+    = f.button :submit
+
 .table-responsive
   %table.table.table-striped.table-bordered.table-hover
     %thead
