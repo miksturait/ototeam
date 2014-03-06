@@ -2,7 +2,8 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.all.page(params[:page])
+    @q = Event.search(params[:q])
+    @events = @q.result.page(params[:page])
   end
 
   def show

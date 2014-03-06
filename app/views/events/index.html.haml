@@ -2,6 +2,13 @@
   = icon_link_to :plus, 'New Event', new_event_path, class: 'btn btn-primary'
   %h1 Listing events
 
+= search_form_for @q, wrapper: :search_form do |f|
+  = f.input :name_or_description_cont, placeholder: 'Name or description contains', wrapper_html: { class: 'col-sm-4' }
+  = f.input :start_at_gt, placeholder: 'Starts after', as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
+  = f.input :start_at_lt, placeholder: 'Starts before', as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
+  .form-group
+    = f.button :submit
+
 .table-responsive
   %table.table.table-striped.table-bordered.table-hover
     %thead
