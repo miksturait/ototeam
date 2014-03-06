@@ -1,4 +1,6 @@
 class Friend < ActiveRecord::Base
+  belongs_to :creator, class_name: User
+
   validates :fullname, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }, allow_blank: true
   validate :has_email_or_phone

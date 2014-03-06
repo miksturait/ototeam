@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  belongs_to :creator, class_name: User
+
   before_validation :fill_invite_from, unless: :invite_from
   before_validation :fill_invite_to, unless: :invite_to
   validates :name, :start_at, :minutes_for_answer, presence: true
