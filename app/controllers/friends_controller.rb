@@ -53,6 +53,6 @@ class FriendsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def friend_params
-      params.require(:friend).permit(:name, :email, :numer_tel)
+      params.require(:friend).permit(:name, :email, :numer_tel, :groups)
     end
 end

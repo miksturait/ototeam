@@ -27,6 +27,8 @@ group :development do
   gem 'quiet_assets', '~> 1.0.2'
   gem 'better_errors', '~> 1.1.0'
   gem 'rb-fsevent', '~> 0.9.4' if `uname` =~ /Darwin/
+  gem 'erb2haml'
+  gem 'datetimepicker-rails', require: 'datetimepicker-rails', github: 'newstler/datetimepicker-rails'
 end
 
 group :development, :test do

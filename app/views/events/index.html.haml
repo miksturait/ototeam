@@ -26,18 +26,12 @@
 
 
 
-
-
-
-      = search_form_for @search do |f|
-        =f.label :name_cont, 'Name contains'
-        =f.text_field :name_cont
-        %tr
-        =f.label :description_cont, 'Description constains'
-        =f.text_field :description_cont
-        =f.label :start_time_cont, 'Start time'
-        =f.text_field :start_time_cont
-        =f.submit 'Search'
+      = search_form_for @search, wrapper: :search_form do |f|
+        = f.input :name_or_description_cont, placeholder: 'Name or description contains', wrapper_html: { class: 'col-sm-4' }
+        = f.input :start_time_gt, placeholder: 'Starts after', as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
+        = f.input :start_time_lt, placeholder: 'Starts before', as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
+        .form-group
+          = f.button :submit
 
         = paginate @events
       - @events.each do |event|
