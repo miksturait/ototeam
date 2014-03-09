@@ -40,6 +40,12 @@ en:
       title: "New event"
     show:
       title: "Show event"
+    create:
+      success: "Event was successfully created."
+    update:
+      success: "Event was successfully updated."
+    destroy:
+      success: "Event was successfully destroyed."
   friends:
     edit:
       title: "Editing friend"
@@ -52,6 +58,12 @@ en:
       title: "New friend"
     show:
       title: "Show friend"
+    create:
+      success: "Friend was successfully created."
+    update:
+      success: "Friend was successfully updated."
+    destroy:
+      success: "Friend was successfully destroyed."
   groups:
     edit:
       title: "Editing group"
@@ -64,6 +76,12 @@ en:
       title: "New group"
     show:
       title: "Show group"
+    create:
+      success: "Group was successfully created."
+    update:
+      success: "Group was successfully updated."
+    destroy:
+      success: "Group was successfully destroyed."
   layouts:
     application:
       events: "Events"

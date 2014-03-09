@@ -20,7 +20,7 @@ class GroupsController < AuthenticatedUser
     @group = groups.build(group_params)
 
     if @group.save
-      redirect_to @group, notice: 'Group was successfully created.'
+      redirect_to @group, notice: t('groups.create.success')
     else
       render action: 'new'
     end
@@ -28,7 +28,7 @@ class GroupsController < AuthenticatedUser
 
   def update
     if @group.update(group_params)
-      redirect_to @group, notice: 'Group was successfully updated.'
+      redirect_to @group, notice: t('groups.update.success')
     else
       render action: 'edit'
     end
@@ -36,7 +36,7 @@ class GroupsController < AuthenticatedUser
 
   def destroy
     @group.destroy
-    redirect_to groups_url, notice: 'Group was successfully destroyed.'
+    redirect_to groups_url, notice: t('groups.destroy.success')
   end
 
   private

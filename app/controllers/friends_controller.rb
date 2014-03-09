@@ -20,7 +20,7 @@ class FriendsController < AuthenticatedUser
     @friend = friends.build(friend_params)
 
     if @friend.save
-      redirect_to @friend, notice: 'Friend was successfully created.'
+      redirect_to @friend, notice: t('friends.create.success')
     else
       render action: 'new'
     end
@@ -28,7 +28,7 @@ class FriendsController < AuthenticatedUser
 
   def update
     if @friend.update(friend_params)
-      redirect_to @friend, notice: 'Friend was successfully updated.'
+      redirect_to @friend, notice: t('friends.update.success')
     else
       render action: 'edit'
     end
@@ -36,7 +36,7 @@ class FriendsController < AuthenticatedUser
 
   def destroy
     @friend.destroy
-    redirect_to friends_url, notice: 'Friend was successfully destroyed.'
+    redirect_to friends_url, notice: t('friends.destroy.success')
   end
 
   private

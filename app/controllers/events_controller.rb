@@ -20,7 +20,7 @@ class EventsController < AuthenticatedUser
     @event = events.build(event_params)
 
     if @event.save
-      redirect_to @event, notice: 'Event was successfully created.'
+      redirect_to @event, notice: t('events.create.success')
     else
       render action: 'new'
     end
@@ -28,7 +28,7 @@ class EventsController < AuthenticatedUser
 
   def update
     if @event.update(event_params)
-      redirect_to @event, notice: 'Event was successfully updated.'
+      redirect_to @event, notice: t('events.update.success')
     else
       render action: 'edit'
     end
@@ -36,7 +36,7 @@ class EventsController < AuthenticatedUser
 
   def destroy
     @event.destroy
-    redirect_to events_url, notice: 'Event was successfully destroyed.'
+    redirect_to events_url, notice: t('events.destroy.success')
   end
 
   private
