@@ -23,7 +23,7 @@ en:
     save: 'Save'
     events:
       index:
-      new_event: 'New Event'
+        new_event: 'New Event'
 ```
 
 2. Wykorzystanie w widoku
