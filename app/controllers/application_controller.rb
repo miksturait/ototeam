@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:account_update) << :locale
     devise_parameter_sanitizer.for(:account_update) << { own_profile_attributes: [:id, :fullname, :phone] }
   end
 end

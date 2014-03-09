@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140306105214) do
+ActiveRecord::Schema.define(version: 20140309230235) do
 
   create_table "events", force: true do |t|
     t.string   "state"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20140306105214) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "locale"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
