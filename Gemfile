@@ -41,4 +41,5 @@ group :development, :test do
   gem 'rspec-its', '~> 1.0.0'
   gem 'pry', '~> 0.9.12.6'
   gem 'pry-debugger', '~> 0.2.2'
+  gem 'binding_of_caller', '~> 0.7.2'
 end
