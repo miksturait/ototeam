@@ -1,0 +1,18 @@
+pl:
+  views:
+    pagination:
+      first: "Pierwsza"
+      last: "Ostatnia"
+      previous: "Poprzednia"
+      next: "Następna"
+      truncate: "..."
+  helpers:
+      page_entries_info:
+        one_page:
+          display_entries:
+            zero: "Nie znaleziono %{entry_name}"
+            one: "Wyświetlany <b>1</b> %{entry_name}"
+            other: "Wyświetlane <b>wszystkie %{count}</b> %{entry_name}"
+        more_pages:
+          display_entries: "Wyświetlane %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> z <b>%{total}</b> wszystkich"
+        

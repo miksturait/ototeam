@@ -22,6 +22,6 @@ class Friend < ActiveRecord::Base
   private
 
   def has_email_or_phone
-    errors.add(:base, 'Please define email or phone') if email.blank? and phone.blank?
+    errors.add(:base, :empty_phone_and_email) if email.blank? and phone.blank?
   end
 end

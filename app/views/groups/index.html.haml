@@ -12,7 +12,7 @@
     %thead
       %tr
         - %w(name friends_count actions).each do |column|
-          = Group.human_attribute_name(column)
+          %th= Group.human_attribute_name(column)
     %tbody
       = render @groups
 

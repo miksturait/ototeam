@@ -21,6 +21,6 @@ class Event < ActiveRecord::Base
   end
 
   def timeline_is_correct
-    errors.add(:base, 'Dates order is invalid') if invite_from >= invite_to or invite_to > start_at
+    errors.add(:base, :invalid_dates_order) if invite_from >= invite_to or invite_to > start_at
   end
 end

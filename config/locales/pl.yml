@@ -1,0 +1,137 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+pl:
+  activerecord:
+    models:
+      event: Spotkanie
+      friend: Znajomy
+      group: Grupa
+    errors:
+      models:
+        event:
+          attributes:
+            base:
+              invalid_dates_order: Nieprawidłowa kolejność dat
+        friend:
+          attributes:
+            base:
+              empty_phone_and_email: Proszę podaj email oraz / lub telefon
+    attributes:
+      user:
+        email: Email
+        password: Hasło
+        password_confirmation: Potwierdzenie hasła
+        remember_me: Zapamiętaj mnie
+
+      event:
+        state: Status
+        name: Nazwa
+        description: Opis
+        start_at: Rozpoczęcie
+        invite_from: Zapraszaj od
+        invite_to: Zapraszaj do
+        attendees_min_count: Minimalna liczba uczestników
+        attendees_max_count: Maksymalna liczba uczestników
+        minutes_for_answer: Czas na odpowiedź
+        public_attendees_list: Publikuj listę obecnych
+        actions: Akcje
+      friend:
+        fullname: Imię i nazwisko
+        email: Email
+        phone: Telefon
+        groups: Grupy
+        attendance: Obecność
+        actions: Akcje
+      group:
+        name: Nazwa
+        friends_count: Liczba członków
+        actions: Akcje
+  back: "Wróć"
+  update: "Zapisz"
+  confirmation: "Czy jesteś pewien?"
+  show: "Pokaż"
+  edit: "Edytuj"
+  destroy: "Usuń"
+  events:
+    edit:
+      title: "Edycja spotkania"
+    index:
+      new_event: "Nowe spotkanie"
+      title: "Lista spotkań"
+      search_form:
+        name_or_description_contains: "Nazwa lub opis zawiera"
+        starts_after: "Zaczyna się po"
+        starts_before: "Zaczyna się przed"
+    new:
+      title: "Nowe spotkanie"
+    show:
+      title: "Szczegóły spotkania"
+    create:
+      success: "Utworzono spotkanie."
+    update:
+      success: "Zaktualizowano spotkanie."
+    destroy:
+      success: "Usunięto spotkanie."
+  friends:
+    edit:
+      title: "Edycja znajomego"
+    index:
+      new_friend: "Nowy znajomy"
+      title: "Lista znajomych"
+      search_form:
+        name_email_or_phone_contains: "Nazwa, email lub telefon zawiera"
+    new:
+      title: "Nowy znajomy"
+    show:
+      title: "Szczegóły znajomego"
+    create:
+      success: "Utworzono znajomego."
+    update:
+      success: "Zaktualizowano znajomego."
+    destroy:
+      success: "Usunięto znajomego."
+  groups:
+    edit:
+      title: "Edycja grupy"
+    index:
+      title: "Lista grup"
+      search_form:
+        name_contains: "Nazwa zawiera"
+      new_group: "Nowa grupa"
+    new:
+      title: "Nowa grupa"
+    show:
+      title: "Szczegóły grupy"
+    create:
+      success: "Utworzono grupę."
+    update:
+      success: "Zaktualizowano grupę."
+    destroy:
+      success: "Usunięto grupę."
+  layouts:
+    application:
+      events: "Spotkania"
+      friends: "Znajomi"
+      groups: "Grupy"
+      profile: "Profil"
+      logout: "Wyloguj"
+      toggle_navigation: "Nawigacja"

@@ -90,3 +90,6 @@ en:
       profile: "Profile"
       logout: "Logout"
       toggle_navigation: "Toggle navigation"
+  devise:
+    registrations:
+      cancel_account: "Cancel my account"

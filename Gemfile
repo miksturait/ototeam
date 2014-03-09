@@ -20,6 +20,9 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'datetimepicker-rails', require: 'datetimepicker-rails', github: 'newstler/datetimepicker-rails'
 gem 'devise', '~> 3.2.3'
+gem 'devise-i18n', '~> 0.10.2'
+gem 'kaminari-i18n', '~> 0.1.3'
+gem 'rails-i18n', '~> 4.0.1'
 
 group :development do
   gem 'guard-rails', '~> 0.5.0'
