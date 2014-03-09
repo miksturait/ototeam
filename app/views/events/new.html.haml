@@ -1,5 +1,5 @@
 .page-header
-  = icon_link_to 'list-alt', 'Back', events_path, class: 'btn btn-default'
-  %h1 New event
+  = icon_link_to 'list-alt', t('back'), events_path, class: 'btn btn-default'
+  %h1= t('.title')
 
 = render 'form'

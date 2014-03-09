@@ -1,11 +1,11 @@
 .page-header
-  = icon_link_to :plus, 'New Event', new_event_path, class: 'btn btn-primary'
-  %h1 Listing events
+  = icon_link_to :plus, t('.new_event'), new_event_path, class: 'btn btn-primary'
+  %h1= t('.title')
 
 = search_form_for @q, wrapper: :search_form do |f|
-  = f.input :name_or_description_cont, placeholder: 'Name or description contains', wrapper_html: { class: 'col-sm-4' }
-  = f.input :start_at_gt, placeholder: 'Starts after', as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
-  = f.input :start_at_lt, placeholder: 'Starts before', as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
+  = f.input :name_or_description_cont, placeholder: t('.search_form.name_or_description_contains'), wrapper_html: { class: 'col-sm-4' }
+  = f.input :start_at_gt, placeholder: t('.search_form.starts_after'), as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
+  = f.input :start_at_lt, placeholder: t('.search_form.starts_before'), as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
   .form-group
     = f.button :submit
 
@@ -13,14 +13,8 @@
   %table.table.table-striped.table-bordered.table-hover
     %thead
       %tr
-        %th State
-        %th Name
-        %th Start at
-        %th Attendees
-        %th Limit
-        %th Invite from
-        %th Actions
-
+        - %w(state name start_at attendees limit invite_from actions).each do |column|
+          %th= Event.human_attribute_name(column)
     %tbody
       = render @events
 

@@ -23,3 +23,20 @@ en:
   back: "Back"
   update: "Update"
   confirmation: "Are you sure?"
+  show: "Show"
+  edit: "Edit"
+  destroy: "Destroy"
+  events:
+    edit:
+      title: "Editing event"
+    index:
+      new_event: "New Event"
+      title: "Listing events"
+      search_form:
+        name_or_description_contains: "Name or description contains"
+        starts_after: "Starts after"
+        starts_before: "Starts before"
+    new:
+      title: "New event"
+    show:
+      title: "Show event"

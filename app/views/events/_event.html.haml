@@ -6,6 +6,6 @@
   %td= "#{event.attendees_min_count || '*'} - #{event.attendees_max_count || '*'}"
   %td= event.invite_from
   %td
-    = link_to 'Show', event
-    = link_to 'Edit', edit_event_path(event)
-    = link_to 'Destroy', event, data: { confirm: 'Are you sure?' }, method: :delete
+    = link_to t('show'), event
+    = link_to t('edit'), edit_event_path(event)
+    = link_to t('destroy'), event, data: { confirm: t('confirmation') }, method: :delete
