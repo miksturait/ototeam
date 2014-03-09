@@ -52,3 +52,15 @@ en:
       title: "New friend"
     show:
       title: "Show friend"
+  groups:
+    edit:
+      title: "Editing group"
+    index:
+      title: "Listing groups"
+      search_form:
+        name_contains: "Name contains"
+      new_group: "New Group"
+    new:
+      title: "New group"
+    show:
+      title: "Show group"

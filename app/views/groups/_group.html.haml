@@ -2,6 +2,6 @@
   %td= group.name
   %td= group.friends_count
   %td
-    = link_to 'Show', group
-    = link_to 'Edit', edit_group_path(group)
-    = link_to 'Destroy', group, data: { confirm: 'Are you sure?' }, method: :delete
+    = link_to t('show'), group
+    = link_to t('edit'), edit_group_path(group)
+    = link_to t('destroy'), group, data: { confirm: t('confirmation') }, method: :delete
