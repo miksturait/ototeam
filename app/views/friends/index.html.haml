@@ -1,10 +1,10 @@
 .page-header
-  = icon_link_to :plus, 'New Friend', new_friend_path, class: 'btn btn-primary'
-  %h1 Listing friends
+  = icon_link_to :plus, t('.new_friend'), new_friend_path, class: 'btn btn-primary'
+  %h1= t('.title')
 
 = search_form_for @q, wrapper: :search_form do |f|
   = f.input :fullname_or_email_or_phone_cont, as: :string,
-                                              placeholder: 'Name, email or phone contains',
+                                              placeholder: t('.search_form.name_email_or_phone_contains'),
                                               wrapper_html: { class: 'col-sm-4' }
   .form-group
     = f.button :submit
@@ -13,12 +13,8 @@
   %table.table.table-striped.table-bordered.table-hover
     %thead
       %tr
-        %th Fullname
-        %th Email
-        %th Phone
-        %th Groups
-        %th Attendance
-        %th Actions
+        - %w(fullname email phone groups attendance actions).each do |column|
+          %th= Friend.human_attribute_name(column)
     %tbody
       = render @friends
 

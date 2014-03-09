@@ -40,3 +40,15 @@ en:
       title: "New event"
     show:
       title: "Show event"
+  friends:
+    edit:
+      title: "Editing friend"
+    index:
+      new_friend: "New Friend"
+      title: "Listing friends"
+      search_form:
+        name_email_or_phone_contains: "Name, email or phone contains"
+    new:
+      title: "New friend"
+    show:
+      title: "Show friend"
