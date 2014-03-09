@@ -64,3 +64,11 @@ en:
       title: "New group"
     show:
       title: "Show group"
+  layouts:
+    application:
+      events: "Events"
+      friends: "Friends"
+      groups: "Groups"
+      profile: "Profile"
+      logout: "Logout"
+      toggle_navigation: "Toggle navigation"

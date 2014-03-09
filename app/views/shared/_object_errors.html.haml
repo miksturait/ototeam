@@ -1,8 +1,7 @@
 -if object.errors.any?
   .alert.alert-danger.alert-dismissable
     %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", type: "button"} &times;
-    %h4= "#{pluralize(object.errors.count, "error")} prohibited this event from being saved:"
-
+    %h4= t('errors.messages.not_saved', count: object.errors.count, resource: object.class.model_name.human)
     %ul
       - object.errors.full_messages.each do |msg|
         %li= msg

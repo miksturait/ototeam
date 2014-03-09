@@ -20,7 +20,7 @@
       .container
         .navbar-header
           %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '.navbar-collapse'} }
-            %span.sr-only Toggle navigation
+            %span.sr-only = t('.toggle_navigation')
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
@@ -29,16 +29,16 @@
           .collapse.navbar-collapse
             %ul.nav.navbar-nav
               %li.active
-                = link_to 'Events', events_path
+                = link_to t('.events'), events_path
               %li
-                = link_to 'Friends', friends_path
+                = link_to t('.friends'), friends_path
               %li
-                = link_to 'Groups', groups_path
+                = link_to t('.groups'), groups_path
             %ul.nav.navbar-nav.navbar-right
               %li
-                = link_to 'Profile', edit_user_registration_path
+                = link_to t('.profile'), edit_user_registration_path
               %li
-                = link_to 'Logout', destroy_user_session_path, method: :delete
+                = link_to t('.logout'), destroy_user_session_path, method: :delete
     .container
       = render 'shared/flash_messages'
       = yield
