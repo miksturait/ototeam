@@ -4,10 +4,6 @@ class FriendsController < AuthenticatedUser
   expose(:search) { friends.search(params[:q]) }
   expose(:filtered_friends) { search.result.page(params[:page]) }
 
-
-  def show
-    binding.pry
-  end
   def create
     if friend.save
       redirect_to friend, notice: t('friends.create.success')
