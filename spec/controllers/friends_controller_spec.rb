@@ -64,7 +64,7 @@ describe FriendsController do
       context 'expect request' do
         after { call_request }
 
-        it { expect_any_instance_of(Friend).to receive(:save) }
+        it { expect_any_instance_of(Friend).to receive(:save).with(valid_attributes) }
       end
 
       context 'with request' do

@@ -23,7 +23,7 @@ RAILS_ENV=test rake db:migrate
 ## Rodzaje testów
 
 * **Testy jednostkowe:** weryfikują rezultaty zawracane przez poszczególne metody (stosowane dla modeli).
-* **Testy funkcyjne:** weryfikują efekty uboczne wykonania różnych akcji (stosowane dla kontrolerów)
+* **Testy funkcjonalne:** weryfikują efekty uboczne wykonania różnych akcji (stosowane dla kontrolerów)
 * **Testy integracyjne:** weryfikują rezultaty i efekty uboczne interakcji na wielu kontrolerach - najczęściej sprawdzają
 czy ważne dla użytkownika czynności w aplikacji są wykonywalne.
 
