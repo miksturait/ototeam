@@ -2,7 +2,7 @@
   = icon_link_to :plus, t('.new_friend'), new_friend_path, class: 'btn btn-primary'
   %h1= t('.title')
 
-= search_form_for @q, wrapper: :search_form do |f|
+= search_form_for search, wrapper: :search_form do |f|
   = f.input :fullname_or_email_or_phone_cont, as: :string,
                                               placeholder: t('.search_form.name_email_or_phone_contains'),
                                               wrapper_html: { class: 'col-sm-4' }
@@ -16,8 +16,8 @@
         - %w(fullname email phone groups attendance actions).each do |column|
           %th= Friend.human_attribute_name(column)
     %tbody
-      = render @friends
+      = render filtered_friends
 
 .text-center
-  .text-muted= page_entries_info @friends
-  = paginate @friends
+  .text-muted= page_entries_info filtered_friends
+  = paginate filtered_friends

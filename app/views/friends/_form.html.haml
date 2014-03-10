@@ -1,5 +1,5 @@
-= simple_form_for @friend, html: { class: 'form-horizontal' } do |f|
-  = render 'shared/object_errors', object: @friend
+= simple_form_for friend, html: { class: 'form-horizontal' } do |f|
+  = render 'shared/object_errors', object: friend
 
   = f.input :fullname
   = f.input :email

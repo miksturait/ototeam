@@ -1,9 +1,9 @@
 .page-header
   = icon_link_to 'list-alt', t('back'), friends_path, class: 'btn btn-default'
-  = icon_link_to :pencil, t('edit'), edit_friend_path(@friend), class: 'btn btn-primary'
+  = icon_link_to :pencil, t('edit'), edit_friend_path(friend), class: 'btn btn-primary'
   %h1= t('.title')
 
 %dl.dl-horizontal
-  = attribute_entry(@friend, :fullname)
-  = attribute_entry(@friend, :email)
-  = attribute_entry(@friend, :phone)
+  = attribute_entry(friend, :fullname)
+  = attribute_entry(friend, :email)
+  = attribute_entry(friend, :phone)
