@@ -2,7 +2,7 @@
   = icon_link_to :plus, t('.new_event'), new_event_path, class: 'btn btn-primary'
   %h1= t('.title')
 
-= search_form_for @q, wrapper: :search_form do |f|
+= search_form_for search, wrapper: :search_form do |f|
   = f.input :name_or_description_cont, placeholder: t('.search_form.name_or_description_contains'), wrapper_html: { class: 'col-sm-4' }
   = f.input :start_at_gt, placeholder: t('.search_form.starts_after'), as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
   = f.input :start_at_lt, placeholder: t('.search_form.starts_before'), as: :datetime_picker, wrapper_html: { class: 'col-sm-3' }
@@ -16,8 +16,8 @@
         - %w(state name start_at attendees limit invite_from actions).each do |column|
           %th= Event.human_attribute_name(column)
     %tbody
-      = render @events
+      = render filtered_events
 
 .text-center
-  .text-muted= page_entries_info @events
-  = paginate @events
+  .text-muted= page_entries_info filtered_events
+  = paginate filtered_events

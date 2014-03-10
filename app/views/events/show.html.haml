@@ -1,16 +1,16 @@
 .page-header
   = icon_link_to 'list-alt', t('back'), events_path, class: 'btn btn-default'
-  = icon_link_to :pencil, t('edit'), edit_event_path(@event), class: 'btn btn-primary'
+  = icon_link_to :pencil, t('edit'), edit_event_path(event), class: 'btn btn-primary'
   %h1= t('.title')
 
 %dl.dl-horizontal
-  = attribute_entry(@event, :state)
-  = attribute_entry(@event, :name)
-  = attribute_entry(@event, :description)
-  = attribute_entry(@event, :start_at)
-  = attribute_entry(@event, :invite_from)
-  = attribute_entry(@event, :invite_to)
-  = attribute_entry(@event, :attendees_min_count)
-  = attribute_entry(@event, :attendees_max_count)
-  = attribute_entry(@event, :minutes_for_answer)
-  = attribute_entry(@event, :public_attendees_list)
+  = attribute_entry(event, :state)
+  = attribute_entry(event, :name)
+  = attribute_entry(event, :description)
+  = attribute_entry(event, :start_at)
+  = attribute_entry(event, :invite_from)
+  = attribute_entry(event, :invite_to)
+  = attribute_entry(event, :attendees_min_count)
+  = attribute_entry(event, :attendees_max_count)
+  = attribute_entry(event, :minutes_for_answer)
+  = attribute_entry(event, :public_attendees_list)
