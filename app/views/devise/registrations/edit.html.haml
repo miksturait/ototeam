@@ -6,7 +6,7 @@
   = f.simple_fields_for :own_profile do |profile_form|
     = profile_form.input :fullname
     = profile_form.input :phone
-  = f.input :locale, collection: I18n.available_locales
+  = f.input :locale, as: :radio_buttons, collection: I18n.available_locales
   = f.input :email, required: true, autofocus: true
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     %p
