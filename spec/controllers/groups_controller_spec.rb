@@ -32,7 +32,6 @@ describe GroupsController do
 
   describe '#create' do
     let(:call_request) { post :create, group: valid_attributes }
-    before { post :create, group: valid_attributes }
 
     context 'with valid params' do
       it { expect {call_request}.to change(Group, :count).by(1) }
@@ -65,7 +64,7 @@ describe GroupsController do
       context 'expect request' do
         after { call_request }
 
-        it { expect_any_instance_of(Group).to receive(:update).with(valid_attributes) }
+        it { expect_any_instance_of(Group).to receive(:save) }
       end
 
       context 'with request' do

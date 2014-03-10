@@ -32,10 +32,9 @@ describe FriendsController do
 
   describe '#create' do
     let(:call_request) { post :create, friend: valid_attributes }
-    before { post :create, friend: valid_attributes }
 
     context 'with valid params' do
-      it { expect {call_request}.to change(Friend, :count).by(1) }
+      it { expect { call_request }.to change(Friend, :count).by(1) }
 
       context 'with request' do
         before { call_request }
@@ -58,14 +57,14 @@ describe FriendsController do
   end
 
   describe '#update' do
-    let(:valid_attributes) { { 'fullname' => 'Some name' } }
+    let(:valid_attributes) { {'fullname' => 'Some name'} }
     let(:call_request) { put :update, id: friend.to_param, friend: valid_attributes }
 
     describe 'with valid params' do
       context 'expect request' do
         after { call_request }
 
-        it { expect_any_instance_of(Friend).to receive(:update).with(valid_attributes) }
+        it { expect_any_instance_of(Friend).to receive(:save) }
       end
 
       context 'with request' do
@@ -91,7 +90,7 @@ describe FriendsController do
     let(:call_request) { delete :destroy, id: friend.to_param }
     before { friend }
 
-    it { expect{call_request}.to change(Friend, :count).by(-1) }
+    it { expect { call_request }.to change(Friend, :count).by(-1) }
 
     context 'with request' do
       before { call_request }
