@@ -9,25 +9,25 @@ describe EventsController do
   describe '#index' do
     before { get :index }
 
-    it { expect(assigns(:events)).to eq([event]) }
+    it { expect(controller.events).to eq([event]) }
   end
 
   describe '#show' do
     before { get :show, id: event.to_param }
 
-    it { expect(assigns(:event)).to eq(event) }
+    it { expect(controller.event).to eq(event) }
   end
 
   describe '#new' do
     before { get :new }
 
-    it { expect(assigns(:event)).to be_a_new(Event) }
+    it { expect(controller.event).to be_a_new(Event) }
   end
 
   describe '#edit' do
     before { get :edit, id: event.to_param }
 
-    it { expect(assigns(:event)).to eq(event) }
+    it { expect(controller.event).to eq(event) }
   end
 
   describe '#create' do
@@ -40,8 +40,8 @@ describe EventsController do
       context 'with request' do
         before { call_request }
 
-        it { expect(assigns(:event)).to be_a(Event) }
-        it { expect(assigns(:event)).to be_persisted }
+        it { expect(controller.event).to be_a(Event) }
+        it { expect(controller.event).to be_persisted }
         it { expect(response).to redirect_to(Event.last) }
       end
     end
@@ -52,7 +52,7 @@ describe EventsController do
         call_request
       end
 
-      it { expect(assigns(:event)).to be_a_new(Event) }
+      it { expect(controller.event).to be_a_new(Event) }
       it { expect(response).to render_template('new') }
     end
   end
@@ -71,7 +71,7 @@ describe EventsController do
       context 'with request' do
         before { call_request }
 
-        it { expect(assigns(:event)).to eq(event) }
+        it { expect(controller.event).to eq(event) }
         it { expect(response).to redirect_to(event) }
       end
     end
@@ -82,7 +82,7 @@ describe EventsController do
         call_request
       end
 
-      it { expect(assigns(:event)).to eq(event) }
+      it { expect(controller.event).to eq(event) }
       it { expect(response).to render_template('edit') }
     end
   end

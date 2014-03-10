@@ -9,25 +9,25 @@ describe GroupsController do
   describe '#index' do
     before { get :index }
 
-    it { expect(assigns(:groups)).to eq([group]) }
+    it { expect(controller.groups).to eq([group]) }
   end
 
   describe '#show' do
     before { get :show, id: group.to_param }
 
-    it { expect(assigns(:group)).to eq(group) }
+    it { expect(controller.group).to eq(group) }
   end
 
   describe '#new' do
     before { get :new }
 
-    it { expect(assigns(:group)).to be_a_new(Group) }
+    it { expect(controller.group).to be_a_new(Group) }
   end
 
   describe '#edit' do
     before { get :edit, id: group.to_param }
 
-    it { expect(assigns(:group)).to eq(group) }
+    it { expect(controller.group).to eq(group) }
   end
 
   describe '#create' do
@@ -40,8 +40,8 @@ describe GroupsController do
       context 'with request' do
         before { call_request }
 
-        it { expect(assigns(:group)).to be_a(Group) }
-        it { expect(assigns(:group)).to be_persisted }
+        it { expect(controller.group).to be_a(Group) }
+        it { expect(controller.group).to be_persisted }
         it { expect(response).to redirect_to(Group.last) }
       end
     end
@@ -52,7 +52,7 @@ describe GroupsController do
         call_request
       end
 
-      it { expect(assigns(:group)).to be_a_new(Group) }
+      it { expect(controller.group).to be_a_new(Group) }
       it { expect(response).to render_template('new') }
     end
   end
@@ -71,7 +71,7 @@ describe GroupsController do
       context 'with request' do
         before { call_request }
 
-        it { expect(assigns(:group)).to eq(group) }
+        it { expect(controller.group).to eq(group) }
         it { expect(response).to redirect_to(group) }
       end
     end
@@ -82,7 +82,7 @@ describe GroupsController do
         call_request
       end
 
-      it { expect(assigns(:group)).to eq(group) }
+      it { expect(controller.group).to eq(group) }
       it { expect(response).to render_template('edit') }
     end
   end

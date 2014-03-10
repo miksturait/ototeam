@@ -9,25 +9,25 @@ describe FriendsController do
   describe '#index' do
     before { get :index }
 
-    it { expect(assigns(:friends)).to eq([friend]) }
+    it { expect(controller.friends).to eq([friend]) }
   end
 
   describe '#show' do
     before { get :show, id: friend.to_param }
 
-    it { expect(assigns(:friend)).to eq(friend) }
+    it { expect(controller.friend).to eq(friend) }
   end
 
   describe '#new' do
     before { get :new }
 
-    it { expect(assigns(:friend)).to be_a_new(Friend) }
+    it { expect(controller.friend).to be_a_new(Friend) }
   end
 
   describe '#edit' do
     before { get :edit, id: friend.to_param }
 
-    it { expect(assigns(:friend)).to eq(friend) }
+    it { expect(controller.friend).to eq(friend) }
   end
 
   describe '#create' do
@@ -40,8 +40,8 @@ describe FriendsController do
       context 'with request' do
         before { call_request }
 
-        it { expect(assigns(:friend)).to be_a(Friend) }
-        it { expect(assigns(:friend)).to be_persisted }
+        it { expect(controller.friend).to be_a(Friend) }
+        it { expect(controller.friend).to be_persisted }
         it { expect(response).to redirect_to(Friend.last) }
       end
     end
@@ -52,7 +52,7 @@ describe FriendsController do
         call_request
       end
 
-      it { expect(assigns(:friend)).to be_a_new(Friend) }
+      it { expect(controller.friend).to be_a_new(Friend) }
       it { expect(response).to render_template('new') }
     end
   end
@@ -71,7 +71,7 @@ describe FriendsController do
       context 'with request' do
         before { call_request }
 
-        it { expect(assigns(:friend)).to eq(friend) }
+        it { expect(controller.friend).to eq(friend) }
         it { expect(response).to redirect_to(friend) }
       end
     end
@@ -82,7 +82,7 @@ describe FriendsController do
         call_request
       end
 
-      it { expect(assigns(:friend)).to eq(friend) }
+      it { expect(controller.friend).to eq(friend) }
       it { expect(response).to render_template('edit') }
     end
   end
