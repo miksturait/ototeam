@@ -29,7 +29,6 @@ describe EventsController do
   end
 
   describe '#new' do
-
     context 'after request' do
       before { get :new }
 

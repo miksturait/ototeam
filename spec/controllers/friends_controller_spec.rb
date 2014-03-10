@@ -46,13 +46,14 @@ describe FriendsController do
     end
 
     describe 'with invalid params' do
-      before do
-        allow_any_instance_of(Friend).to receive(:save).and_return(false)
-        call_request
-      end
+      let(:call_request) { post :create, friend: {fullname: 'Damn'} }
 
-      it { expect(controller.friend).to be_a_new(Friend) }
-      it { expect(response).to render_template('new') }
+      context 'with request' do
+        before { call_request }
+
+        it { expect(controller.friend).to be_a_new(Friend) }
+        it { expect(response).to render_template('new') }
+      end
     end
   end
 
@@ -61,12 +62,6 @@ describe FriendsController do
     let(:call_request) { put :update, id: friend.to_param, friend: valid_attributes }
 
     describe 'with valid params' do
-      context 'expect request' do
-        after { call_request }
-
-        it { expect_any_instance_of(Friend).to receive(:save).with(valid_attributes) }
-      end
-
       context 'with request' do
         before { call_request }
 
