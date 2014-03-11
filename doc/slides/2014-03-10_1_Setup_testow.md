@@ -95,7 +95,7 @@ Jeżli chcemy wykonać konkretny plik z testami to:
 
 **Na brązowy rubin:**
 Dodaj cechę (trait) dla fabryki `events`, która dodatkowo utworzy i ustawi creatora spotkania.
-Przy pomocy tej cechy utwórz kilka dodatkowych spotkań z przeszłości w `db/seeds.rb`
+Przy pomocy tej cechy utwórz kilka dodatkowych spotkań w `db/seeds.rb`
 
 **Na srebrny rubin:**
 Utwórz fabrykę dziedziczącą z fabryki `events`, która będzie tworzyła eventy w przeszłości.
@@ -105,3 +105,7 @@ Przy pomocy tej cechy utwórz kilka dodatkowych spotkań z przeszłości w `db/s
 Dodaj cechę (trait) dla fabryki `events`, która prócz utworzenia spotkania utworzy dwóch znajomych,
 którzy są zaproszeni do tego spotkania. Wymagane będzie dodanie relacji wiele-do-wiele między spotkaniem a znajomym,
 które dodatkowo przechowa informację o decyzji zaproszonego (np. pole state:string)
+
+**UWAGA: po dokonaniu zmiany w fabryce należy w konsoli railsowej wykonać**
+`FactoryGirl.reload`
+**by zmiany zostały zastosowane.**
