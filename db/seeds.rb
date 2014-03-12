@@ -6,6 +6,6 @@ ActiveRecord::Base.transaction do
   FactoryGirl.create_list(:group, 10, creator: user)
   puts "User: #{user.email} Password: secret"
 
-  additional_event = FactoryGirl.create(:event, :with_creator)
+  additional_event = FactoryGirl.create(:event, :with_creator, :with_attendances)
   puts "User: #{additional_event.creator.email} Password: secret"
 end

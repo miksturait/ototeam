@@ -3,6 +3,8 @@ class Friend < ActiveRecord::Base
   belongs_to :creator, class_name: User
   has_many :group_memberships
   has_many :groups, through: :group_memberships
+  has_many :attendances
+  has_many :events, through: :attendances
 
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }, allow_blank: true
   validate :has_email_or_phone, unless: :user

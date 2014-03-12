@@ -1,5 +1,7 @@
 class Event < ActiveRecord::Base
   belongs_to :creator, class_name: User
+  has_many :attendances
+  has_many :friends, through: :attendances
 
   before_validation :fill_invite_from, unless: :invite_from
   before_validation :fill_invite_to, unless: :invite_to

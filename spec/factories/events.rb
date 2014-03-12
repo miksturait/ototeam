@@ -16,5 +16,11 @@ FactoryGirl.define do
     trait :with_creator do
       association :creator, factory: :user
     end
+
+    trait :with_attendances do
+      after(:create) do |event|
+        2.times { event.friends << create(:friend, creator: event.creator) }
+      end
+    end
   end
 end
