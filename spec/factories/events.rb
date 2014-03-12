@@ -12,5 +12,9 @@ FactoryGirl.define do
     attendees_max_count { attendees_min_count + rand(5) }
     minutes_for_answer 60
     public_attendees_list false
+
+    trait :with_creator do
+      association :creator, factory: :user
+    end
   end
 end
