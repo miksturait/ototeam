@@ -61,4 +61,4 @@ skorzystać z metody `raw` lub `html_safe`. Wizualizacja końcowego efektu na na
 
 ## Zadanie
 
-![listing](../images/list_results.png)
+![listing](https://github.com/miksturait/ototeam/blob/next/doc/images/list_results.png?raw=true)
