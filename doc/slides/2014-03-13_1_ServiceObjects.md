@@ -4,9 +4,15 @@ class: center, middle, inverse
 
 ---
 
-## Kiedy stosujemy SO
+## Dlaczego stosujemy SO
 
 ### Single Responsibility Principle
+### Izolacja i prędkość testów
+
+---
+
+## Kiedy stosujemy SO
+
 ### Callback dotyka innej klasy
 ### Procesy / Procedury / Ciągi zdarzeń
 
@@ -101,11 +107,11 @@ end
 
 ---
 
-## Zadanie
+## Zadanie (pamiętajcie o testach!)
 
 **Na brązowy rubin:**
 
-Utwórz usługę `GroupCreator` - ma ona dodawać wszystkich znajomych automatycznie do samej siebie zaraz po utworzeniu.
+Utwórz usługę `GroupCreator` dodającą wszystkich obecnych znajomych automatycznie do samej siebie zaraz po utworzeniu.
 
 **Na srebrny rubin:**
 
