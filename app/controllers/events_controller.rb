@@ -3,6 +3,7 @@ class EventsController < AuthenticatedUser
   expose(:event, attributes: :event_params)
   expose(:search){ events.search(params[:q]) }
   expose(:filtered_events){ search.result.page(params[:page]) }
+  expose(:decorated_events) { filtered_events.decorate }
 
   def create
     if event.save

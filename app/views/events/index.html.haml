@@ -16,7 +16,7 @@
         - %w(state name start_at attendees limit invite_from actions).each do |column|
           %th= Event.human_attribute_name(column)
     %tbody
-      = render filtered_events
+      = render decorated_events
 
 .text-center
   .text-muted= page_entries_info filtered_events

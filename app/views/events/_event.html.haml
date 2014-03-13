@@ -3,7 +3,7 @@
   %td= event.name
   %td= event.start_at
   %td= event.attendees_count
-  %td= "#{event.attendees_min_count || '*'} - #{event.attendees_max_count || '*'}"
+  %td= event.limit_label
   %td= event.invite_from
   %td
     = link_to t('show'), event
