@@ -55,8 +55,8 @@ end
 class UserCreator
   attr_reader :user
 
-  def initialize(user_params)
-    @user = User.new(user_params)
+  def initialize(params)
+    @user = User.new(params[:user] || {})
   end
 
   def save
@@ -86,7 +86,7 @@ end
 ```
 class RegistrationsController < ApplicationController
   #...
-  expose(:user_creator) { UserCreator.new(user_params) }
+  expose(:user_creator) { UserCreator.new(params) }
 
   def create
     if user_creator.save
