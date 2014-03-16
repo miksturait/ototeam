@@ -3,7 +3,9 @@ Ototeam::Application.routes.draw do
   devise_scope :user do
     root 'events#index'
   end
-  resources :events
+  resources :events do
+    resources :attendances, only: [:index, :create, :destroy]
+  end
   resources :friends
   resources :groups
   resources :slides, only: %i(index show)

@@ -40,6 +40,7 @@ en:
       title: "New event"
     show:
       title: "Show event"
+      invitations: "Invitations"
     create:
       success: "Event was successfully created."
     update:
@@ -93,3 +94,12 @@ en:
   devise:
     registrations:
       cancel_account: "Cancel my account"
+  attendances:
+    create:
+      success: "Friend has been added to inviting list."
+    destroy:
+      success: "Friend has been removed from invitation list."
+    index:
+      invited_friends: "Invited friends"
+      no_friends_invited: "No friends have been invited yet."
+      no_friends_in_group: "No friends to add from this group."

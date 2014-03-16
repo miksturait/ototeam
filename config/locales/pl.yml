@@ -85,6 +85,7 @@ pl:
       title: "Nowe spotkanie"
     show:
       title: "Szczegóły spotkania"
+      invitations: "Zaproszenia"
     create:
       success: "Utworzono spotkanie."
     update:
@@ -135,3 +136,12 @@ pl:
       profile: "Profil"
       logout: "Wyloguj"
       toggle_navigation: "Nawigacja"
+  attendances:
+    create:
+      success: "Znajomy został dodany do listy zapraszanych."
+    destroy:
+      success: "Znajomy został usunięty z listy zapraszanych."
+    index:
+      invited_friends: "Zaproszeni znajomi"
+      no_friends_invited: "Nie dodano jeszcze żadnego znajomego."
+      no_friends_in_group: "Brak członków do dodania z tej grupy."

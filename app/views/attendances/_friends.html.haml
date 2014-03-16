@@ -1,0 +1,19 @@
+.panel.panel-default
+  .panel-heading
+    %ul.nav.nav-pills
+      - groups_with_friends.each do |group, friends|
+        %li{class: "#{group.active_tab_class}"}
+          %a{href: "##{dom_id(group)}", data: { toggle: 'tab' }}= group.name
+  .panel-body
+    .tab-content
+      - groups_with_friends.each do |group, friends|
+        .tab-pane{class: "tab-pane #{group.active_tab_class}", id: dom_id(group)}
+          - if friends.present?
+            %ul.list-unstyled
+              - friends.each do |friend|
+                %li
+                  .pull-left= friend.fullname
+                  = friend.add_button(event)
+          - else
+            %p.text-muted= t('.no_friends_in_group')
+  .panel-footer

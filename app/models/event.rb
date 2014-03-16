@@ -8,10 +8,6 @@ class Event < ActiveRecord::Base
   validates :name, :start_at, :minutes_for_answer, presence: true
   validate :timeline_is_correct, if: :start_at
 
-  def attendees_count
-    0
-  end
-
   private
 
   def fill_invite_from

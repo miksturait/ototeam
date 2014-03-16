@@ -1,0 +1,13 @@
+.panel.panel-default
+  .panel-heading
+    %h4= t('.invited_friends')
+  .panel-body
+    - if decorated_attendances.present?
+      %ul.list-unstyled
+        - decorated_attendances.each do |attendance|
+          %li
+            .pull-left= attendance.label
+            = attendance.cancel_button
+    - else
+      %p.text-muted= t('.no_friends_invited')
+  .panel-footer

@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe EventDecorator do
+  let(:event) { create(:event) }
   subject { event.decorate }
 
   describe '#limit_label' do
@@ -15,5 +16,11 @@ describe EventDecorator do
 
       it { expect(subject.limit_label).to eql '5 - 8' }
     end
+  end
+
+  describe '#attendances_count' do
+    before { create(:attendance, event: subject, friend: create(:friend)) }
+
+    its(:attendances_count) { should eql 1 }
   end
 end

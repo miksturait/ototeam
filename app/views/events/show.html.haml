@@ -1,7 +1,8 @@
 .page-header
   = icon_link_to 'list-alt', t('back'), events_path, class: 'btn btn-default'
   = icon_link_to :pencil, t('edit'), edit_event_path(event), class: 'btn btn-primary'
-  %h1= t('.title')
+  = icon_link_to :send, t('.invitations'), event_attendances_path(event), class: 'btn btn-primary'
+  %h1= event.name
 
 %dl.dl-horizontal
   = attribute_entry(event, :state)
