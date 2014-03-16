@@ -1,14 +1,17 @@
 = simple_form_for event, html: { class: 'form-horizontal' } do |f|
   = render 'shared/object_errors', object: event
 
+  %h3 General information
   = f.input :name
+  = f.input :start_at, as: :datetime_picker
   = f.input :description
-  = f.input :start_at
-  = f.input :invite_from
-  = f.input :invite_to
-  = f.input :attendees_min_count
-  = f.input :attendees_max_count
-  = f.input :minutes_for_answer
+
+  %h3 Inviting
+  = f.input :invite_from, as: :datetime_picker, placeholder: 'default: from now'
+  = f.input :invite_to, as: :datetime_picker, placeholder: 'default: till event start'
+  = f.input :attendees_min_count, as: :integer, placeholder: 'default: no limit'
+  = f.input :attendees_max_count, as: :integer, placeholder: 'default: no limit'
+  = f.input :minutes_for_answer, as: :radio_buttons, collection: Event::ALLOWED_MINUTES_FOR_RESPONSE
   = f.input :public_attendees_list
   .form-group
     .col-sm-offset-2.col-sm-10

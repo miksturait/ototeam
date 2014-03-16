@@ -31,6 +31,8 @@ pl:
           attributes:
             base:
               invalid_dates_order: Nieprawidłowa kolejność dat
+            attendees_min_count:
+              cant_be_greater_then_attendees_min_count: nie może być większy niż górny limit
         friend:
           attributes:
             base:

@@ -20,6 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    errors:
+      models:
+        event:
+          attributes:
+            base:
+              invalid_dates_order: Incorrect dates order
+            attendees_min_count:
+              cant_be_greater_then_attendees_min_count: can't be greater then max limit
+        friend:
+          attributes:
+            base:
+              empty_phone_and_email: Please define email or phone
   back: "Back"
   update: "Update"
   confirmation: "Are you sure?"
