@@ -8,8 +8,8 @@ gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '~> 2.5.0'
 gem 'therubyracer', '~> 0.12.1'
 gem 'coffee-rails', '~> 4.0.1'
-gem 'jquery-rails'
-gem 'turbolinks'
+gem 'jquery-rails', '~> 3.1.0'
+gem 'turbolinks', '~> 2.2.1'
 gem 'bootstrap-generators', '~> 3.1.1'
 gem 'bootstrap-sass', '~> 3.1.0'
 gem 'haml-rails', '~> 0.5.3'
@@ -49,12 +49,12 @@ group :development, :test do
   unless ENV['RM_INFO']
     gem 'pry', '~> 0.9.12.6'
     gem 'pry-debugger', '~> 0.2.2'
-    gem 'pry-remote'
+    gem 'pry-remote', '~> 0.1.8'
   end
   gem 'binding_of_caller', '~> 0.7.2'
 end
 
 group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+  gem 'pg', '~> 0.17.1'
+  gem 'rails_12factor', '~> 0.0.2'
 end
