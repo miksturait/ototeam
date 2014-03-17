@@ -27,18 +27,7 @@
           = link_to 'otoTeam', root_path, class: 'navbar-brand'
         - if user_signed_in?
           .collapse.navbar-collapse
-            %ul.nav.navbar-nav
-              %li.active
-                = link_to t('.events'), events_path
-              %li
-                = link_to t('.friends'), friends_path
-              %li
-                = link_to t('.groups'), groups_path
-            %ul.nav.navbar-nav.navbar-right
-              %li
-                = link_to t('.profile'), edit_user_registration_path
-              %li
-                = link_to t('.logout'), destroy_user_session_path, method: :delete
+            = render_navigation expand_all: true, renderer: :bootstrap
     .container
       = render 'shared/flash_messages'
       = yield
