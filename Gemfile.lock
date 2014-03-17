@@ -304,7 +304,6 @@ DEPENDENCIES
   rails (= 4.0.3)
   rails-i18n (~> 4.0.1)
   ransack!
-  rb-fsevent (~> 0.9.4)
   rspec-collection_matchers (~> 0.0.3)
   rspec-its (~> 1.0.0)
   rspec-rails (= 3.0.0.beta1)

@@ -33,7 +33,6 @@ group :development do
   gem 'rack-livereload', '~> 0.3.15'
   gem 'quiet_assets', '~> 1.0.2'
   gem 'better_errors', '~> 1.1.0'
-  gem 'rb-fsevent', '~> 0.9.4' if `uname` =~ /Darwin/
 end
 
 group :development, :test do
