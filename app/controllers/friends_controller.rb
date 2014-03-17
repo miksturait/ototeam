@@ -3,6 +3,7 @@ class FriendsController < AuthenticatedUser
   expose(:friend, attributes: :friend_params)
   expose(:search) { friends.search(params[:q]) }
   expose(:filtered_friends) { search.result.page(params[:page]) }
+  expose(:decorated_friends) { filtered_friends.decorate }
 
   def create
     if friend.save

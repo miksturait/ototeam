@@ -3,6 +3,7 @@ class GroupsController < AuthenticatedUser
   expose(:group, attributes: :group_params)
   expose(:search) { groups.search(params[:q]) }
   expose(:filtered_groups) { search.result.page(params[:page]) }
+  expose(:decorated_groups) { filtered_groups.decorate }
 
   def create
     if group.save

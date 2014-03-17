@@ -14,7 +14,7 @@
         - %w(name friends_count actions).each do |column|
           %th= Group.human_attribute_name(column)
     %tbody
-      = render filtered_groups
+      = render decorated_groups
 
 .text-center
   .text-muted= page_entries_info filtered_groups

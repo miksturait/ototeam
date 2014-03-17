@@ -5,6 +5,6 @@
   %td= friend.group_names
   %td= friend.attendance_percentage
   %td
-    = link_to t('show'), friend
-    = link_to t('edit'), edit_friend_path(friend)
-    = link_to t('destroy'), friend, data: { confirm: t('confirmation') }, method: :delete
+    = friend.show_link
+    = friend.edit_link
+    = friend.destroy_link

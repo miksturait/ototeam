@@ -9,6 +9,10 @@ class Friend < ActiveRecord::Base
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }, allow_blank: true
   validate :has_email_or_phone, unless: :user
 
+  def to_s
+    fullname.presence || current_email.presence || phone
+  end
+
   def group_names
     groups.map(&:name).to_sentence
   end

@@ -16,7 +16,7 @@
         - %w(fullname email phone groups attendance actions).each do |column|
           %th= Friend.human_attribute_name(column)
     %tbody
-      = render filtered_friends
+      = render decorated_friends
 
 .text-center
   .text-muted= page_entries_info filtered_friends
