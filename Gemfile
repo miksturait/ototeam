@@ -39,7 +39,7 @@ end
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.9'
-  gem 'rspec-rails', '3.0.0.beta2'
+  gem 'rspec-rails', '3.0.0.beta1'
   gem 'factory_girl_rails', '~> 4.4.1'
   gem 'ffaker', '~> 1.23.0'
   gem 'spring-commands-rspec', '~> 1.0.1'
