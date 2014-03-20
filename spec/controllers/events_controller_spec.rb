@@ -68,7 +68,7 @@ describe EventsController do
     describe 'with invalid params' do
       let(:attributes) { {event: {}} }
 
-      it { expect { call_request }.to_not change { Event.count }.by(1) }
+      it { expect { call_request }.to change { Event.count }.by(0) }
 
       context 'after request' do
         before { call_request }
